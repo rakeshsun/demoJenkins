@@ -3,4 +3,70 @@
   <groupId>jenkins</groupId>
   <artifactId>demo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <build>
+		<sourceDirectory>src</sourceDirectory>
+		<testSourceDirectory>src/main/java/</testSourceDirectory>
+		<resources>
+			<resource>
+				<directory>/resources</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.7.0</version>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+						<encoding>cp1252</encoding>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.22.1</version>
+					<configuration>
+						<!-- <argLine>-DpackageName=${packageName} -DtestngFile=${testngFile} 
+							-DenableGrid=${enableGrid} -DtestName=${testName} -DtestDataFile=${testDataFile} 
+							-DExcelDataProviderFile=${ExcelDataProviderFile} -Xss512k -Xms1024m -Xmx1024m</argLine> -->
+						<suiteXmlFiles>
+							<suiteXmlFile>${testngFile}</suiteXmlFile>
+						</suiteXmlFiles>
+						<packageName>${packageName}</packageName>
+						<browserName>${browserName}</browserName>
+						<disableXmlReport>true</disableXmlReport>
+						<outputDirectory>target/test-output</outputDirectory>
+						<testFailureIgnore>false</testFailureIgnore>
+						<properties>
+							<property>
+								<name>usedefaultlisteners</name>
+								<key>false</key>
+							</property>
+						</properties>
+					</configuration>
+					<dependencies>
+					</dependencies>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+  <dependencies>
+  <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>3.141.5</version>
+</dependency>
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.3.0</version>
+    <scope>test</scope>
+</dependency>
+
+  </dependencies>
 </project>
