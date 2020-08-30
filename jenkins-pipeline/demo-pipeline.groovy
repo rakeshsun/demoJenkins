@@ -1,4 +1,4 @@
-throttle(['external_grid']) {
+
     node () {
         def isBuildFailure = false
         //def gridURL = "${env.GRIDLASTIC_URL}"
@@ -55,5 +55,5 @@ throttle(['external_grid']) {
                         submoduleCfg                     : [],
                         userRemoteConfigs                : [[credentialsId: "${gitId}", url: 'https://github.com/rakeshsun/devops-project.git']]])
             }
-        }}
+}
 }
