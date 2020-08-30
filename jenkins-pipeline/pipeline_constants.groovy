@@ -16,7 +16,7 @@ def testdataFilesList = 'TestData.xml\nTestData-GmilProd.xml\nTestData-Prod.xml\
 def svnId = '9d48cec4-e56a-4c80-bd18-e2b409f4e562'
 
 @Field
-def gitId = '34abf6de-951c-49b1-bf8e-7dacf946d45'
+def gitId = '34ab'
 
 @Field
 def wwwTestUrl = 'https://wwwsqs.officedepot.com/iphone/\nhttps://wwwsqe.officedepot.com/iphone/\nhttps://wwwsqm.officedepot.com/iphone/\nhttps://www.officedepot.com/\nhttps://wwwsln.officedepot.com/iphone/\nhttps://wwwsqp8.officedepot.com/iphone/\nhttps://wwwsqf8.uschecomrnd.net/iphone/\nhttps://wwwsqf.officedepot.com/iphone/\nhttps://wwwpoc.officedepot.com/iphone/'
