@@ -35,7 +35,7 @@
         def rpDescription
         stage("Read Constants and Shared Library") {
             script {
-                constants = evaluate readTrusted('jenkins_pipeline/pipeline_constants.groovy')
+                constants = evaluate readTrusted('jenkins-pipeline/pipeline_constants.groovy')
                 sharedLib = evaluate readTrusted('jenkins_pipeline/common_lib.groovy')
                 gitId = "${constants.gitId}"
                 testngFilesList = "${constants.testngFilesList}"
