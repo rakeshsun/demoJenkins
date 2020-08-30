@@ -47,7 +47,7 @@
         }
 
         stage("Get Package Names from SCM") {
-            container('ctmgit') {
+          
                 checkout([
                         $class                           : 'GitSCM',
                         branches                         : [[name: '*/master']],
@@ -55,6 +55,6 @@
                         extensions                       : [],
                         submoduleCfg                     : [],
                         userRemoteConfigs                : [[credentialsId: "${gitId}", url: 'https://github.com/rakeshsun/devops-project.git']]])
-            }
+          
 }
 }
