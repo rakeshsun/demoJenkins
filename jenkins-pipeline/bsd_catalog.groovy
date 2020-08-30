@@ -36,7 +36,7 @@
         stage("Read Constants and Shared Library") {
             script {
                 constants = evaluate readTrusted('jenkins-pipeline/pipeline_constants.groovy')
-                sharedLib = evaluate readTrusted('jenkins_pipeline/common_lib.groovy')
+                sharedLib = evaluate readTrusted('jenkins-pipeline/common_lib.groovy')
                 gitId = "${constants.gitId}"
                 testngFilesList = "${constants.testngFilesList}"
                 testdataFilesList = "${constants.testdataFilesList}"
