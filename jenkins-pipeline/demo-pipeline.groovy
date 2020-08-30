@@ -1,5 +1,6 @@
 
     node () {
+
         def isBuildFailure = false
         //def gridURL = "${env.GRIDLASTIC_URL}"
         def application = 'bsd'
